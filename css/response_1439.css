@@ -1,0 +1,25 @@
+@media print,
+(max-width: 1439px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    .cont
+    {
+        max-width: calc(var(--content_width) + var(--cont_padding_double) * 2);
+        padding-inline: var(--cont_padding_double);
+    }
+
+
+
+    /*----------------
+        Directions
+    ----------------*/
+    .directions
+    {
+        .item
+        {
+            padding-left: 42px;
+        }
+    }
+}

@@ -1,0 +1,237 @@
+@media print,
+(max-width: 1023px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --cont_padding: 24px;
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header
+    {
+        .top
+        {
+            padding-block: var(--inner_gap_xs);
+        }
+
+
+        .data
+        {
+            padding-block: var(--inner_gap_s);
+        }
+
+
+        .contacts
+        {
+            gap: var(--inner_gap_s);
+        }
+
+
+        .logo
+        {
+            img
+            {
+                width: 154px;
+                height: 40px;
+            }
+        }
+
+
+        .menu
+        {
+            position: absolute;
+            top: 100%;
+            left: 100%;
+
+            flex-direction: column;
+
+            width: 320px;
+            margin-top: calc(var(--inner_gap_s) * -1);
+            padding: var(--block_padding);
+
+            z-index: 10;
+            transition: .2s linear;
+
+            border-block: 1px solid rgba(255, 255, 255, .15);
+            border-radius: var(--border_radius);
+            background: rgba(10, 13, 20, .40);
+
+                    backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            gap: var(--inner_gap_xxs);
+
+
+            &.show
+            {
+                transform: translateX(calc(-100% - var(--cont_padding) - 8px));
+            }
+
+
+            .item
+            {
+                a
+                {
+                    display: flex;
+                    align-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+
+                    min-height: 48px;
+
+                    font-size: var(--font_size);
+                    font-weight: 400;
+                    line-height: calc(100% + 8px);
+
+                    color: rgba(255, 255, 255, .50);
+                }
+            }
+        }
+
+
+        .mob_menu_btn
+        {
+            display: flex;
+        }
+    }
+
+
+
+    /*-----------
+        Stats
+    -----------*/
+    .stats
+    {
+        .grid_row
+        {
+            --gap_x: var(--inner_gap_l);
+            --gap_y: var(--inner_gap_l);
+        }
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps
+    {
+        .grid_row
+        {
+            --items_per_line: 1;
+        }
+    }
+
+
+
+    /*----------------
+        Advantages
+    ----------------*/
+    .advantages
+    {
+        .grid_row
+        {
+            --items_per_line: 1;
+        }
+    }
+
+
+
+    /*----------------
+        Directions
+    ----------------*/
+    .directions
+    {
+        .item
+        {
+            padding-left: 29.119%;
+        }
+    }
+
+
+
+    /*-----------
+        Cases
+    -----------*/
+    .cases
+    {
+        .grid_row
+        {
+            --items_per_line: 2;
+        }
+    }
+
+
+
+    /*-------------------
+        Consult block
+    -------------------*/
+    .consult_block
+    {
+        .data
+        {
+            padding-block: var(--cont_padding_double);
+            padding-inline: var(--block_padding);
+        }
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer
+    {
+        .data
+        {
+            .grid_row
+            {
+                --items_per_line: 1;
+                --gap_x: var(--inner_gap_l);
+                --gap_y: var(--inner_gap_l);
+            }
+
+
+            .contacts
+            {
+                .items
+                {
+                    display: flex;
+                    align-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    gap: var(--inner_gap_l);
+                }
+            }
+        }
+
+
+        .col
+        {
+            gap: var(--inner_gap_s);
+        }
+
+
+        .title
+        {
+            margin-bottom: var(--inner_gap_s);
+        }
+
+
+        .copyright
+        {
+            width: 296px;
+            max-width: 100%;
+        }
+    }
+}

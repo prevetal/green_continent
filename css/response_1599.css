@@ -1,0 +1,31 @@
+@media print,
+(max-width: 1599px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --content_width: 1344px;
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header
+    {
+        --content_width: 1344px;
+    }
+
+
+
+    /*------------------
+        Before/After
+    ------------------*/
+    .before_after
+    {
+        --content_width: 1344px;
+    }
+}

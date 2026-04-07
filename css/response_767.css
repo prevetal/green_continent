@@ -1,0 +1,422 @@
+@media (max-width: 767px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --cont_padding: 16px;
+        --font_size_title_l: 40px;
+        --font_size_title: 24px;
+        --outside_gap: 64px;
+    }
+
+
+
+    /*--------------
+        More btn
+    --------------*/
+    .more_btn
+    {
+        width: 100%;
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head
+    {
+        .desc
+        {
+            margin-top: var(--inner_gap_xxs);
+
+            font-size: var(--font_size_l);
+            line-height: calc(100% + 6px);
+        }
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header
+    {
+        .data
+        {
+            padding-block: var(--inner_gap);
+        }
+
+
+        .work_time
+        {
+            display: none;
+        }
+
+
+        .contacts
+        {
+            justify-content: space-between;
+
+            width: 100%;
+        }
+
+
+        .logo
+        {
+            img
+            {
+                width: 123px;
+                height: 32px;
+            }
+        }
+
+
+        .mob_menu_btn
+        {
+            width: 40px;
+
+
+            .icon
+            {
+                width: 26px;
+            }
+        }
+    }
+
+
+
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section
+    {
+        .cont
+        {
+            padding-block: 160px 64px;
+        }
+
+
+        .desc
+        {
+            margin-top: 0;
+
+            font-size: var(--font_size_l);
+            line-height: calc(100% + 6px);
+        }
+
+
+        .btns
+        {
+            margin-top: 0;
+
+
+            .btn
+            {
+                width: 100%;
+            }
+        }
+    }
+
+
+
+    /*-----------
+        Stats
+    -----------*/
+    .stats
+    {
+        padding-block: var(--outside_gap);
+
+
+        .grid_row
+        {
+            --items_per_line: 2;
+        }
+    }
+
+
+
+    /*---------------
+        Solutions
+    ---------------*/
+    .solutions
+    {
+        .data
+        {
+            .title
+            {
+                font-size: var(--font_size_title);
+            }
+
+
+            .tags
+            {
+                display: grid;
+                overflow: auto;
+
+                width: calc(100% + var(--cont_padding_double));
+                margin-inline: calc(var(--cont_padding) * -1);
+                padding-inline: var(--cont_padding);
+
+                grid-auto-flow: column;
+                grid-auto-columns: max-content;
+                scroll-padding: 0 var(--cont_padding);
+                scroll-snap-type: x mandatory;
+                scrollbar-color: transparent transparent;
+                scrollbar-width: thin;
+
+
+                &::-webkit-scrollbar
+                {
+                    display: none;
+
+                    width: 0;
+                    height: 0;
+
+                    background-color: transparent;
+                }
+
+
+                &::-webkit-scrollbar-thumb
+                {
+                    background-color: transparent;
+                }
+
+
+                > *
+                {
+                    scroll-snap-align: start;
+                }
+            }
+
+
+            .features
+            {
+                display: grid;
+                overflow: auto;
+
+                width: calc(100% + var(--cont_padding_double));
+                margin-inline: calc(var(--cont_padding) * -1);
+                padding-inline: var(--cont_padding);
+
+                grid-auto-flow: column;
+                grid-auto-columns: max-content;
+                scroll-padding: 0 var(--cont_padding);
+                scroll-snap-type: x mandatory;
+                scrollbar-color: transparent transparent;
+                scrollbar-width: thin;
+
+
+                &::-webkit-scrollbar
+                {
+                    display: none;
+
+                    width: 0;
+                    height: 0;
+
+                    background-color: transparent;
+                }
+
+
+                &::-webkit-scrollbar-thumb
+                {
+                    background-color: transparent;
+                }
+
+
+                > *
+                {
+                    scroll-snap-align: start;
+                }
+            }
+
+
+            .btn
+            {
+                width: 100%;
+            }
+        }
+    }
+
+
+
+    /*-------------------
+        Smart control
+    -------------------*/
+    .smart_control
+    {
+        .data
+        {
+            .grid_row
+            {
+                --items_per_line: 1;
+            }
+
+
+            .compatibility
+            {
+                .items
+                {
+                    > *
+                    {
+                        width: calc(50% - var(--inner_gap_s) / 2);
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    /*------------------
+        Before/After
+    ------------------*/
+    .before_after
+    {
+        .images
+        {
+            height: 302px;
+        }
+
+
+        .btn
+        {
+            width: 100%;
+        }
+    }
+
+
+
+    /*----------------
+        Directions
+    ----------------*/
+    .directions
+    {
+        .item
+        {
+            padding-left: var(--block_padding);
+
+
+            .info
+            {
+                padding-left: 0;
+            }
+        }
+    }
+
+
+
+    /*-----------
+        Cases
+    -----------*/
+    .cases
+    {
+        .grid_row
+        {
+            --items_per_line: 1;
+        }
+
+
+        .item
+        {
+            .info
+            {
+                padding-inline: var(--block_padding_s);
+            }
+        }
+    }
+
+
+
+    /*-------------------
+        Consult block
+    -------------------*/
+    .consult_block
+    {
+        .data
+        {
+            padding-block: var(--block_padding);
+            padding-inline: var(--block_padding_s);
+        }
+
+
+        .block_head
+        {
+            margin-bottom: var(--block_head_offset);
+
+
+            .desc
+            {
+                margin-top: var(--inner_gap_xxs);
+            }
+        }
+
+
+        .form
+        {
+            .line,
+            .submit
+            {
+                width: 100%;
+            }
+        }
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer
+    {
+        .bottom
+        {
+            .cont
+            {
+                gap: var(--inner_gap_s);
+            }
+        }
+
+
+        .data
+        {
+            .contacts
+            {
+                .items
+                {
+                    flex-direction: column;
+                    justify-content: flex-start;
+
+                    gap: var(--inner_gap_xs);
+                }
+            }
+        }
+
+
+        .menu
+        {
+            .items
+            {
+                gap: var(--inner_gap_xs);
+            }
+        }
+
+
+        .copyright
+        {
+            width: 100%;
+        }
+
+
+        .links
+        {
+            align-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+
+            gap: 0;
+        }
+    }
+}
