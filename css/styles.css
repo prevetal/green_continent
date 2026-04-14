@@ -169,11 +169,6 @@ button
     padding-bottom: var(--outside_gap);
 
 
-    &.small_m
-    {
-        margin-bottom: var(--outside_gap_s);
-    }
-
     &.no_m
     {
         margin-bottom: 0;
@@ -203,42 +198,6 @@ img.cover
             background-clip: text;
 
     -webkit-text-fill-color: transparent;
-}
-
-
-
-/*--------------
-    Fancybox
---------------*/
-.fancybox__container
-{
-    --fancybox-backdrop-bg: var(--dark_color);
-    --f-close-button-width: 40px;
-    --f-close-button-height: 40px;
-    --f-close-border-radius: 0;
-    --f-close-button-color: var(--dark_color);
-    --f-close-button-hover-color: var(--dark_color);
-    --f-close-button-svg-width: 24px;
-    --f-close-button-svg-height: 24px;
-    --f-close-button-svg-stroke-width: 1;
-    --f-close-button-bg: transparent;
-    --f-close-button-hover-bg: transparent;
-    --f-close-button-active-bg: transparent;
-}
-
-
-.fancybox__slide,
-.fancybox__slide.has-html,
-.fancybox__slide.has-close-btn
-{
-    padding: var(--inner_gap);
-}
-
-
-.f-button.is-close-button
-{
-    top: 0;
-    right: 0;
 }
 
 
@@ -1135,7 +1094,7 @@ header
 
             &.outlined
             {
-                font-weight: 50;
+                font-weight: 500;
 
                 color: var(--light_color);
                 border: 1px solid rgba(255, 255, 255, .2);

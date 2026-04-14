@@ -143,14 +143,50 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 	// Before/After
-	$('.before_after .images').on('input change', function(e) {
-		let sliderPos = e.target.value,
-			parent = $(this).closest('.before_after')
+	$('.before_after .images').each(function() {
+		const container = $(this)
 
-		parent.find('.img.before').css('width', `${sliderPos}%`)
+		let isDragging = false
 
-		parent.find('.circle').css('left', `${sliderPos}%`)
-		parent.find('.line').css('left', `${sliderPos}%`)
+		function getPercent(clientX) {
+			const rect = container[0].getBoundingClientRect()
+
+			let percent = (clientX - rect.left) / rect.width * 100
+
+			return Math.min(100, Math.max(0, percent))
+		}
+
+		function updatePosition(percent) {
+			const parent = container.closest('.before_after')
+
+			container.find('.img.before img').css('clip-path', `inset(0 ${100 - percent}% 0 0)`)
+
+			parent.find('.circle').css('left', `${percent}%`)
+			parent.find('.line').css('left', `${percent}%`)
+		}
+
+		container.find('.slider').on('input change', function() {
+			updatePosition($(this).val())
+		})
+
+
+		container[0].addEventListener('touchstart', function(e) {
+			isDragging = true
+
+			updatePosition(getPercent(e.touches[0].clientX))
+		}, { passive: true })
+
+		document.addEventListener('touchmove', function(e) {
+			if (!isDragging) return
+
+			e.preventDefault()
+
+			updatePosition(getPercent(e.touches[0].clientX))
+		}, { passive: false })
+
+		document.addEventListener('touchend', function() {
+			isDragging = false
+		}, { passive: true })
 	})
 })
 
